@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery.js"></script>
+    <script src="popper.js"></script>
+    <script src="bootstrap.js"></script>
+    <link rel="stylesheet" href="Master.css">
+    <title>Contact</title>
+    <style type="text/css">
+		label{
+			font-weight: bolder;
+			font-size: 18px;
+		}
+
+		span{
+			font-style: italic;
+			color: red;
+			font-size: 16px;
+		}
+        .contact-form h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #77b300;
+        }
+	</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-5 col-sm-5 col-md-6 col-lg-6 col-xl-6">
+                    <img src="images/logo.png" class="img-fluid mx-auto" alt="Garden Bliss" width="170" height="100">
+                </div>
+                <div class="col-7 col-sm-7 col-md-6 col-lg-6 col-xl-6 ">
+                    <form class="d-flex" role="search" style="margin-top: 10px;">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+		<div class="container-fluid">
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	    		<span class="navbar-toggler-icon"></span>
+	  		</button>
+	  		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item"><a class="nav-link"  href="index.html" style="width: 110px; text-align: center;">HOME</a></li>
+					<li class="nav-item"><a class="nav-link"  href="Vegetable.html" style="width: 110px; text-align: center;">Vegetable</a></li>
+					<li class="nav-item"><a class="nav-link"  href="Flower.html" style="width: 110px; text-align: center;">Flower</a></li>
+					<li class="nav-item"><a class="nav-link"  href="Indoor.html" style="width: 110px; text-align: center;">Indoor</a></li>
+					<li class="nav-item"><a class="nav-link"  href="DIY.html" style="width: 110px; text-align: center;">DIY Projects</a></li>
+					<li class="nav-item active"  style="border-bottom: 3px solid #77b300; font-size: 17px;"><a class="nav-link"  href="Contact.html" style="width: 110px; text-align: center;">Contact</a></li>
+				</ul>
+			</div>	
+		</div>
+	</nav>
+    <section>
+        <div class="container">
+            <div class="contact-form" style="border:3px solid  #77b300; border-radius: 20px; margin-top: 20px;">
+                <div class="row mx-auto">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <h3 style="text-align: center; padding-top: 15px; ">Contact Us for Gardening Tips, Ideas, and Services <br>Please Fill out the below details.</h3><br>
+                    </div><br><br>
+                    <form method="post" action="submit_contact_form.php">
+                        <div class="row mx-auto">
+                            <!-- Name -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto">
+                                <div class="form-group">
+                                    <label for="name">Full Name:</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" name="name" required>
+                                </div>
+                            </div>
+    
+                            <!-- Email -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto">
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row mx-auto">
+                            <!-- Phone Number -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number:</label>
+                                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" name="phone" required>
+                                </div>
+                            </div>
+    
+                            <!-- Interest Area -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto">
+                                <div class="form-group">
+                                    <label for="interest">Area of Interest:</label>
+                                    <select class="form-control" id="interest" name="interest" required>
+                                        <option value="" disabled selected>Select your area of interest</option> 
+                                        <option value="Vegetable Gardening">Vegetable Gardening</option>
+                                        <option value="Flower Gardening">Flower Gardening</option>
+                                        <option value="Indoor Gardening">Indoor Gardening</option>
+                                        <option value="DIY Projects">DIY Gardening Projects</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Message -->
+                        <div class="form-group mx-auto">
+                            <label for="message">Message:</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your message" name="message" required></textarea>
+                        </div>
+    
+                        <input style="margin: 10px 10px 10px 28%; font-size: 15px; width: 120px; background: #77b300; border:1px solid #77b300;"  type="submit" name="" value="SUBMIT" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			
+                        <input style="margin: 10px 0px; font-size: 15px; width: 120px;" type="Reset" name="" value="RESET" class="btn btn-danger">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <footer class="bg-dark">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<h4>@ 2025 Garden Bliss . All Copy Rights Reserved. </h4>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
